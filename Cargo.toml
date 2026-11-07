@@ -1,0 +1,18 @@
+[package]
+name = "wswitch"
+version = "0.1.0"
+edition = "2024"
+description = "A small, dependency-free window switcher for macOS with live previews"
+license = "MIT"
+readme = "README.md"
+keywords = ["macos", "window-switcher", "alt-tab"]
+categories = ["gui"]
+
+[dependencies]
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
+panic = "abort"
+strip = true
